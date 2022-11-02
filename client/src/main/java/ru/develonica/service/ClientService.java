@@ -10,10 +10,15 @@ import static java.lang.Math.random;
 import static java.util.Arrays.stream;
 
 /**
- *
+ * Фиксация общих и синтетических значений ресурсов клиента.
  */
 public class ClientService {
 
+    /**
+     * Имитирует работу клиента, по сбору информации по требуемым ресурсам.
+     *
+     * @return объект с синтетическими показателями.
+     */
     public ResourceInfo getCurrentResource() {
         ResourceInfo totalInfo = getTotalInfo();
 
@@ -25,6 +30,11 @@ public class ClientService {
         return new ResourceInfo(randomRam, randomHertz, randomDiskSpace);
     }
 
+    /**
+     * Сбор общей информации по требуемым ресурсам.
+     *
+     * @return объект с общими значениями показателей необходимых ресурсов.
+     */
     public ResourceInfo getTotalInfo() {
         HardwareAbstractionLayer hardware = new SystemInfo().getHardware();
 
