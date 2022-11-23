@@ -1,0 +1,10 @@
+# URL брокера
+url: tcp://localhost:61616
+# Название топика в брокере сообщений.
+topic-name: Program-Monitoring-Topic
+# Название очереди в брокере сообщений.
+queue-name: Program-Monitoring-Queue
+# Время ожидания между запросами
+wait-time: 6000
+# Имя файла отчета
+file-name: report.csv

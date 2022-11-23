@@ -15,6 +15,12 @@
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <!--        <activemq.version>5.12.0</activemq.version>-->
+        <slf4j.version>2.0.3</slf4j.version>
+        <lombok.version>1.18.24</lombok.version>
+        <jackson.version>2.13.4</jackson.version>
+<!--        <oshi.version>6.3.0</oshi.version>-->
+                <opencsv.version>5.7.1</opencsv.version>
     </properties>
 
     <dependencies>
@@ -22,6 +28,31 @@
             <groupId>ru.develonica</groupId>
             <artifactId>common</artifactId>
             <version>1.0-SNAPSHOT</version>
+        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>org.apache.activemq</groupId>-->
+<!--            <artifactId>activemq-all</artifactId>-->
+<!--            <version>${activemq.version}</version>-->
+<!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>com.github.oshi</groupId>-->
+<!--            <artifactId>oshi-core</artifactId>-->
+<!--            <version>${oshi.version}</version>-->
+<!--        </dependency>-->
+        <dependency>
+            <groupId>com.fasterxml.jackson.dataformat</groupId>
+            <artifactId>jackson-dataformat-yaml</artifactId>
+            <version>${jackson.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.opencsv</groupId>
+            <artifactId>opencsv</artifactId>
+            <version>${opencsv.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.24</version>
         </dependency>
     </dependencies>
 
@@ -36,7 +67,7 @@
                         <manifest>
                             <addClasspath>true</addClasspath>
                             <classpathPrefix>lib/</classpathPrefix>
-                            <mainClass>ru.develonica.ServerRunner</mainClass>
+                            <mainClass>ru.develonica.ServerApplication</mainClass>
                         </manifest>
                     </archive>
                 </configuration>

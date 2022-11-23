@@ -1,0 +1,2 @@
+# URL брокера
+url: broker:(tcp://localhost:61616)
